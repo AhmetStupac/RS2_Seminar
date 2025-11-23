@@ -12,16 +12,16 @@ namespace eCommerce.Services.Database
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Asset> Assets { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<ProductCategory> ProductCategories { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderItem> OrderItems { get; set; }
-        public DbSet<ProductReview> ProductReviews { get; set; }
-        public DbSet<Cart> Carts { get; set; }
-        public DbSet<CartItem> CartItems { get; set; }
-        public DbSet<ProductType> ProductTypes { get; set; }
-        public DbSet<UnitOfMeasure> UnitsOfMeasure { get; set; }
+        public DbSet<PersonalTrainer> PersonalTrainers { get; set; }
+        public DbSet<TrainingPlan> TrainingPlans { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<ExercisePlan> ExercisePlans { get; set; }
+        public DbSet<NutritionPlan> NutritionPlans { get; set; }
+        public DbSet<Meal> Meals { get; set; }
+        public DbSet<MealFood> MealFoods { get; set; }
+        public DbSet<PlanCostItem> PlanCostItems { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
