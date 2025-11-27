@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using eCommerce.Model.Requests;
+using eCommerce.Model.SearchObjects;
+using eCommerce.Services.Database;
+using eCommerce.Services.Interface;
+using MapsterMapper;
 
 namespace eCommerce.Services
 {
-    public class PersonalTrainerService
+    public class PersonalTrainerService : BaseCRUDService<Database.PersonalTrainer, PersonalTrainerSearchObject, Database.PersonalTrainer, PersonalTrainerUpsertRequest, PersonalTrainerUpsertRequest>, IPersonalTrainerService
     {
-
+        public PersonalTrainerService(eCommerceDbContext context, IMapper mapper)
+            : base(context, mapper)
+        {
+        }
     }
 }

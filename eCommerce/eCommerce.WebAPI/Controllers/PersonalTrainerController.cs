@@ -10,6 +10,9 @@ namespace eCommerce.WebAPI.Controllers
     [ApiController]
     public class PersonalTrainerController : BaseCRUDController<PersonalTrainerResponse, PersonalTrainerSearchObject, PersonalTrainerUpsertRequest, PersonalTrainerUpsertRequest>
     {
-
+        public PersonalTrainerController()
+        {
+            
+        }
     }
 }
