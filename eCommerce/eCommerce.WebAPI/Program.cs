@@ -1,6 +1,6 @@
 using eCommerce.Services;
 using eCommerce.Services.Database;
-using eCommerce.Services.ProductStateMachine;
+using eCommerce.Services.Interface;
 using eCommerce.WebAPI.Filters;
 using Mapster;
 using MapsterMapper;
@@ -10,17 +10,18 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<IProductService, ProductService>();
+//builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IUserService, UserService>();
-builder.Services.AddTransient<IProductTypeService, ProductTypeService>();
+//builder.Services.AddTransient<IProductTypeService, ProductTypeService>();
 builder.Services.AddTransient<IRoleService, RoleService>();
-builder.Services.AddTransient<IUnitOfMeasureService, UnitOfMeasureService>();
+//builder.Services.AddTransient<IUnitOfMeasureService, UnitOfMeasureService>();
 
-builder.Services.AddTransient<BaseProductState>();
-builder.Services.AddTransient<InitialProductState>();
-builder.Services.AddTransient<DraftProductState>();
-builder.Services.AddTransient<ActiveProductState>();
-builder.Services.AddTransient<DeactivatedProductState>();
+//builder.Services.AddTransient<BaseProductState>();
+//builder.Services.AddTransient<InitialProductState>();
+//builder.Services.AddTransient<DraftProductState>();
+//builder.Services.AddTransient<ActiveProductState>();
+//builder.Services.AddTransient<DeactivatedProductState>();
+builder.Services.AddTransient<IPersonalTrainerService, PersonalTrainerService>();
 
 builder.Services.AddMapster();
 // Configure database

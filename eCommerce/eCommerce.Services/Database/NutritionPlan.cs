@@ -25,6 +25,6 @@ namespace eCommerce.Services.Database
         public string Carbs { get; set; }
         public int Fats { get; set; }
         public float Price { get; set; }
-        public DateOnly CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

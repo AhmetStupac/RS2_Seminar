@@ -16,7 +16,7 @@ namespace eCommerce.Services.Database
         public int TrainingPlanId { get; set; }            // Foreign Key to TrainingPlan
         public TrainingPlan TrainingPlan { get; set; }
         public string Name { get; set; } = string.Empty;  // e.g. "Nutrition Plan"
-        public decimal Amount { get; set; }         // cijena
+        public float Amount { get; set; }         // cijena
 
     }
 }

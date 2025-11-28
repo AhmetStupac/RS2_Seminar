@@ -16,7 +16,7 @@ namespace eCommerce.Services.Database
         public string Title { get; set; }
         public string Description { get; set; }
         public float BasePrice { get; set; }
-        public DateOnly CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
 
     }

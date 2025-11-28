@@ -1,4 +1,5 @@
 ﻿using eCommerce.Model.Requests;
+using eCommerce.Model.Responses;
 using eCommerce.Model.SearchObjects;
 using eCommerce.Services.Database;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eCommerce.Services.Interface
 {
-    public interface IPersonalTrainerService : ICRUDService<PersonalTrainer, PersonalTrainerSearchObject,PersonalTrainerUpsertRequest, PersonalTrainerUpsertRequest>
+    public interface IPersonalTrainerService : ICRUDService<PersonalTrainerResponse, PersonalTrainerSearchObject,PersonalTrainerUpsertRequest, PersonalTrainerUpsertRequest>
     {
 
     }
