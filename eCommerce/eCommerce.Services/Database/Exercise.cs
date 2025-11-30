@@ -13,9 +13,7 @@ namespace eCommerce.Services.Database
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        [ForeignKey(nameof(MuscleGroup))]
-        public int MuscleGroupId { get; set; } 
-        public MuscleGroup MuscleGroup { get; set; } // samo get
+        public ICollection<ExerciseMuscleGroup> ExerciseMuscleGroups { get; set; } 
         [ForeignKey(nameof(Equipment))]
         public int EquipmentId { get; set; }
         public Equipment Equipment { get; set; }

@@ -12,5 +12,6 @@ namespace eCommerce.Services.Database
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        ICollection<ExerciseMuscleGroup> ExerciseMuscleGroups { get; set; }
     }
 }
