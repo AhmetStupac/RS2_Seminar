@@ -22,6 +22,7 @@ builder.Services.AddTransient<IRoleService, RoleService>();
 //builder.Services.AddTransient<ActiveProductState>();
 //builder.Services.AddTransient<DeactivatedProductState>();
 builder.Services.AddTransient<IPersonalTrainerService, PersonalTrainerService>();
+builder.Services.AddTransient<ITrainingPlanService, TrainingPlanService>();
 
 builder.Services.AddMapster();
 // Configure database

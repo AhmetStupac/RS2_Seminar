@@ -1,4 +1,5 @@
-﻿using eCommerce.Model.Requests;
+﻿using EasyNetQ.Internals;
+using eCommerce.Model.Requests;
 using eCommerce.Model.Responses;
 using eCommerce.Model.SearchObjects;
 using eCommerce.Services.Database;
@@ -20,7 +21,16 @@ namespace eCommerce.Services
         protected override IQueryable<Database.PersonalTrainer> ApplyFilter(IQueryable<Database.PersonalTrainer> query, PersonalTrainerSearchObject search)
         {
 
-            return query.Include(pt=>pt.User);
+            var result = query.Include(pt=>pt.User);
+
+
+            var firstTrainer = result.FirstOrDefault();
+            if (firstTrainer?.User == null)
+            {
+                // User is not being included
+            }
+
+            return result;
         }
     }
 }

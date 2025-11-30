@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eCommerce.Services.Database
 {
@@ -17,6 +12,6 @@ namespace eCommerce.Services.Database
         public TrainingPlan TrainingPlan { get; set; }
         public string Name { get; set; } = string.Empty;  // e.g. "Nutrition Plan"
         public float Amount { get; set; }         // cijena
-
+        // dodati fk na nutrition plan 
     }
 }

@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eCommerce.Services.Database
+namespace eCommerce.Model.Responses
 {
-    public class NutritionPlan
+    public class NutritionPlanResponse
     {
-        [Key]
-        public int Id { get; set; }
-        [ForeignKey(nameof(PersonalTrainer))]
         public int TrainerId { get; set; }
-        public PersonalTrainer Trainer { get; set; }
-        [ForeignKey(nameof(User))]
         public int UserId { get; set; }
-        public User User { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string TotalCalories { get; set; }

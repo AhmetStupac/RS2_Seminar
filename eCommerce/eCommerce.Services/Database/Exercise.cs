@@ -15,7 +15,7 @@ namespace eCommerce.Services.Database
         public string Name { get; set; }
         [ForeignKey(nameof(MuscleGroup))]
         public int MuscleGroupId { get; set; } 
-        public MuscleGroup MuscleGroup { get; set; }
+        public MuscleGroup MuscleGroup { get; set; } // samo get
         [ForeignKey(nameof(Equipment))]
         public int EquipmentId { get; set; }
         public Equipment Equipment { get; set; }

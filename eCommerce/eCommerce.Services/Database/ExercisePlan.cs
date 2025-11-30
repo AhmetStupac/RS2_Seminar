@@ -23,6 +23,5 @@ namespace eCommerce.Services.Database
         public int? Duration { get; set; } // in minutes
         public float? CustomPrice { get; set; }
         public string Note { get; set; }
-
     }
 }
