@@ -13,12 +13,12 @@ namespace eCommerce.Services
 {
     public class UserService : IUserService
     {
-        private readonly eCommerceDbContext _context;
+        private readonly IB210033DbContext _context;
         private const int SaltSize = 16;
         private const int KeySize = 32;
         private const int Iterations = 10000;
 
-        public UserService(eCommerceDbContext context)
+        public UserService(IB210033DbContext context)
         {
             _context = context;
         }

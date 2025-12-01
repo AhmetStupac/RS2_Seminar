@@ -23,6 +23,10 @@ builder.Services.AddTransient<IRoleService, RoleService>();
 //builder.Services.AddTransient<DeactivatedProductState>();
 builder.Services.AddTransient<IPersonalTrainerService, PersonalTrainerService>();
 builder.Services.AddTransient<ITrainingPlanService, TrainingPlanService>();
+builder.Services.AddTransient<IExerciseService, ExerciseService>();
+builder.Services.AddTransient<IMuscleGroupService, MuscleGroupService>();
+builder.Services.AddTransient<IEquipmentService, EquipmentService>();
+
 
 builder.Services.AddMapster();
 // Configure database

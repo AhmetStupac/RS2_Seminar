@@ -14,7 +14,7 @@ namespace eCommerce.Services
     public class EquipmentService : BaseCRUDService
         <EquipmentUpsertRequest, NameSearchObject, Database.Equipment, EquipmentUpsertRequest, EquipmentUpsertRequest>, IEquipmentService
     {
-        public EquipmentService(eCommerceDbContext context, IMapper mapper)
+        public EquipmentService(IB210033DbContext context, IMapper mapper)
             : base(context, mapper)
         {
             

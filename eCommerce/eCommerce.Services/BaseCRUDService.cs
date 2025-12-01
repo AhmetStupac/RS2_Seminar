@@ -15,9 +15,9 @@ namespace eCommerce.Services
     : BaseService<T, TSearch, TEntity>, ICRUDService<T, TSearch, TInsert, TUpdate> 
     where T : class where TSearch : BaseSearchObject where TEntity : class, new() where TInsert : class where TUpdate : class
     {
-        protected readonly eCommerceDbContext _context;
+        protected readonly IB210033DbContext _context;
 
-        public BaseCRUDService(eCommerceDbContext context, IMapper mapper) : base(context, mapper)
+        public BaseCRUDService(IB210033DbContext context, IMapper mapper) : base(context, mapper)
         {
             _context = context;
         }

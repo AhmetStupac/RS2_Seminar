@@ -12,7 +12,7 @@ namespace eCommerce.Services
 {
     public class RoleService : BaseCRUDService<RoleResponse, RoleSearchObject, Database.Role, RoleUpsertRequest, RoleUpsertRequest>, IRoleService
     {
-        public RoleService(eCommerceDbContext context, IMapper mapper) : base(context, mapper)
+        public RoleService(IB210033DbContext context, IMapper mapper) : base(context, mapper)
         {
         }
 

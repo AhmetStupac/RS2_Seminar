@@ -11,7 +11,7 @@ namespace eCommerce.Services
 {
     public class PersonalTrainerService : BaseCRUDService<PersonalTrainerResponse, PersonalTrainerSearchObject, PersonalTrainer, PersonalTrainerUpsertRequest, PersonalTrainerUpsertRequest>, IPersonalTrainerService
     {
-        public PersonalTrainerService(eCommerceDbContext context, IMapper mapper)
+        public PersonalTrainerService(IB210033DbContext context, IMapper mapper)
             : base(context, mapper)
         {
 

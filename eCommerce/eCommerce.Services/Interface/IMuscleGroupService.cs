@@ -1,4 +1,4 @@
-﻿using eCommerce.Model.Requests;
+using eCommerce.Model.Requests;
 using eCommerce.Model.Responses;
 using eCommerce.Model.SearchObjects;
 using System;
@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace eCommerce.Services.Interface
 {
-    public interface IExerciseService : ICRUDService
-        <ExerciseResponse, ExerciseSearchObject, ExerciseUpsertRequest, ExerciseUpsertRequest>
+    public interface IMuscleGroupService : ICRUDService
+        <MuscleGroupResponse, MuscleGroupSearchObject, MuscleGroupUpsertRequest, MuscleGroupUpsertRequest>
     {
 
     }

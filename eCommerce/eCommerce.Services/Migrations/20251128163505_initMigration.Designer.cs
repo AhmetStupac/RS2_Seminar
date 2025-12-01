@@ -11,7 +11,7 @@ using eCommerce.Services.Database;
 
 namespace eCommerce.Services.Migrations
 {
-    [DbContext(typeof(eCommerceDbContext))]
+    [DbContext(typeof(IB210033DbContext))]
     [Migration("20251128163505_initMigration")]
     partial class initMigration
     {

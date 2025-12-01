@@ -10,7 +10,7 @@ using eCommerce.Services.Database;
 
 namespace eCommerce.Services.Migrations
 {
-    [DbContext(typeof(eCommerceDbContext))]
+    [DbContext(typeof(IB210033DbContext))]
     partial class eCommerceDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -11,7 +11,7 @@ namespace eCommerce.Services
     public class NutritionPlanService : BaseCRUDService<NutritionPlanResponse, NameSearchObject, Database.NutritionPlan, NutritionPlanUpsertRequest, NutritionPlanUpsertRequest>, INutritionPlanService
     {
 
-        public NutritionPlanService(eCommerceDbContext context, IMapper mapper)
+        public NutritionPlanService(IB210033DbContext context, IMapper mapper)
             : base(context, mapper)
         {
                         

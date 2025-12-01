@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eCommerce.Services.Database
 {
-    public class eCommerceDbContext : DbContext
+    public class IB210033DbContext : DbContext
     {
-        public eCommerceDbContext(DbContextOptions<eCommerceDbContext> options) : base(options)
+        public IB210033DbContext(DbContextOptions<IB210033DbContext> options) : base(options)
         {
         }
 

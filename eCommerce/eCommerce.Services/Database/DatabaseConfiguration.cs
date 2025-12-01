@@ -7,13 +7,13 @@ namespace eCommerce.Services.Database
     {
         public static void AddDatabaseServices(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<eCommerceDbContext>(options =>
+            services.AddDbContext<IB210033DbContext>(options =>
                 options.UseSqlServer(connectionString));
         }
 
         public static void AddDatabaseEComm(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<eCommerceDbContext>(options =>
+            services.AddDbContext<IB210033DbContext>(options =>
                 options.UseSqlServer(connectionString));
         }
     }

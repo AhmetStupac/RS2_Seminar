@@ -17,7 +17,7 @@ namespace eCommerce.Services
         , ITrainingPlanService
     {
 
-        public TrainingPlanService(eCommerceDbContext context, IMapper mapper)
+        public TrainingPlanService(IB210033DbContext context, IMapper mapper)
             : base(context, mapper)
         {
        

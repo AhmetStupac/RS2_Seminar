@@ -13,10 +13,10 @@ namespace eCommerce.Services
 {
     public abstract class BaseService<T, TSearch, TEntity> : IService<T, TSearch> where T : class where TSearch : BaseSearchObject where TEntity : class
     {
-        private readonly eCommerceDbContext _context;
+        private readonly IB210033DbContext _context;
         protected readonly IMapper _mapper;
 
-        public BaseService(eCommerceDbContext context, IMapper mapper)
+        public BaseService(IB210033DbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
