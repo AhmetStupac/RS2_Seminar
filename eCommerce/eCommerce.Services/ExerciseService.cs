@@ -46,6 +46,8 @@ namespace eCommerce.Services
                 };
                 entity.ExerciseMuscleGroups.Add(exerciseMuscleGroup);
             }
+            _context.Exercises.Add(entity);
+            _context.SaveChanges();
         }
 
         protected override async Task BeforeUpdate(Database.Exercise entity, ExerciseUpsertRequest request)
@@ -67,35 +69,26 @@ namespace eCommerce.Services
                 };
                 _context.Set<ExerciseMuscleGroup>().Add(newRelationship);
             }
+            
         }
 
         protected override IQueryable<Database.Exercise> ApplyFilter(IQueryable<Database.Exercise> query, ExerciseSearchObject search)
         {
-            var result = query.Include(e => e.ExerciseMuscleGroups)
-                             .ThenInclude(emg => emg.MuscleGroup)
-                             .Include(e => e.Equipment);
+            query = query.Include(e => e.ExerciseMuscleGroups)
+                .ThenInclude(emg => emg.MuscleGroup)
+                .Include(e => e.Equipment);
 
             if (!string.IsNullOrEmpty(search.Name))
             {
-                result = result.Where(e => e.Name.Contains(search.Name));
+                query = query.Where(ex => ex.Name.Contains(search.Name));
             }
 
-            if (search.MuscleGroupId.HasValue)
-            {
-                result = result.Where(e => e.ExerciseMuscleGroups.Any(emg => emg.MuscleGroupId == search.MuscleGroupId.Value));
-            }
-
-            if (!string.IsNullOrEmpty(search.FTS))
-            {
-                result = result.Where(e => e.Name.Contains(search.FTS));
-            }
-
-            return result;
+            return query;
         }
 
-        protected override TResponse MapToResponse(Database.Exercise entity)
+        protected override ExerciseResponse MapToResponse(Database.Exercise entity)
         {
-            var response = _mapper.Map<TResponse>(entity);
+            var response = _mapper.Map<ExerciseResponse>(entity);
             
             // If the response is ExerciseResponse, set the MuscleGroupId and MuscleGroupName
             if (response is ExerciseResponse exerciseResponse)
